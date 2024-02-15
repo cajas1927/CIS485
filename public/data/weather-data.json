@@ -1,0 +1,90 @@
+{
+    "CityA": {
+      "2024-02-06": {
+        "Temperature": 25.4,
+        "Humidity": 30,
+        "Weather": "Cloudy",
+        "Wind": {
+          "Speed": 40.7,
+          "Direction": "North"
+        }
+      },
+      "2024-02-05": {
+        "Temperature": 19.2,
+        "Humidity": 60,
+        "Weather": "Rainy",
+        "Wind": {
+          "Speed": 33.2,
+          "Direction": "West"
+        }
+      },
+      "2024-02-04": {
+        "Temperature": 22.8,
+        "Humidity": 45,
+        "Weather": "Sunny",
+        "Wind": {
+          "Speed": 28.5,
+          "Direction": "South"
+        }
+      }
+    },
+    "CityB": {
+      "2024-02-06": {
+        "Temperature": 25.9,
+        "Humidity": 88,
+        "Weather": "Cloudy",
+        "Wind": {
+          "Speed": 67.3,
+          "Direction": "South"
+        }
+      },
+      "2024-02-05": {
+        "Temperature": 19.9,
+        "Humidity": 67,
+        "Weather": "Windy",
+        "Wind": {
+          "Speed": 53.8,
+          "Direction": "West"
+        }
+      },
+      "2024-02-04": {
+        "Temperature": 23.5,
+        "Humidity": 72,
+        "Weather": "Rainy",
+        "Wind": {
+          "Speed": 45.6,
+          "Direction": "East"
+        }
+      }
+    },
+    "CityC": {
+      "2024-02-06": {
+        "Temperature": 22.2,
+        "Humidity": 56,
+        "Weather": "Rainy",
+        "Wind": {
+          "Speed": 89.0,
+          "Direction": "North"
+        }
+      },
+      "2024-02-05": {
+        "Temperature": 32.0,
+        "Humidity": 38,
+        "Weather": "Cloudy",
+        "Wind": {
+          "Speed": 73.8,
+          "Direction": "East"
+        }
+      },
+      "2024-02-04": {
+        "Temperature": 27.3,
+        "Humidity": 49,
+        "Weather": "Sunny",
+        "Wind": {
+          "Speed": 38.4,
+          "Direction": "West"
+        }
+      }
+    }
+  }
+  

@@ -1,0 +1,65 @@
+const express = require('express');
+const router = express.Router();
+const fs = require('fs');
+const path = require('path');
+const multer = require('multer');
+const upload = multer({ dest: 'uploads/' });
+const csvParser = require('csv-parser');
+
+// Route for home page
+router.get('/', (req, res) => {
+    res.render('home');
+});
+
+// Route to display images
+router.get('/images', (req, res) => {
+    const imageDir = path.join(__dirname, '../public/images');
+    fs.readdir(imageDir, (err, files) => {
+        if (err) throw err;
+        res.render('images', { images: files });
+    });
+});
+
+// Route to display data based on query
+router.get('/data', (req, res) => {
+    const { type, filter } = req.query; // e.g., ?type=json&filter=someValue
+
+    if (type === 'json') {
+        const filePath = path.join(__dirname, '../public/data/weather-data.json');
+        fs.readFile(filePath, (err, data) => {
+            if (err) {
+                res.status(404).send('JSON file not found');
+            } else {
+                const jsonData = JSON.parse(data).filter(item => item.City === filter); // Using "City" property for filtering
+                res.render('data', { jsonData }); // Render directly without using a separate handlebars file
+            }
+        });
+    } else if (type === 'csv') {
+        const filePath = path.join(__dirname, '../public/data/patient-data.csv');
+        const results = [];
+        fs.createReadStream(filePath)
+            .pipe(csvParser())
+            .on('data', (data) => {
+                if (data.key === filter) results.push(data);
+            })
+            .on('end', () => {
+                res.render('data', { results }); // Render directly without using a separate handlebars file
+            });
+    } else {
+        res.status(400).send('Unsupported data type. Only JSON and CSV files are supported.');
+    }
+});
+
+// Route to render the form
+router.get('/submit-form', (req, res) => {
+    res.render('form'); // Assuming form.handlebars exists in the views directory
+});
+
+// Route to handle form submission
+router.post('/submit-form', upload.none(), (req, res) => {
+    const { name, email } = req.body;
+    // Process form data here...
+    res.render('form', { name, email });
+});
+
+module.exports = router;
