@@ -1,27 +1,18 @@
 {
-  "name": "CIS485",
+  "name": "lab-07",
   "version": "1.0.0",
-  "description": "node.js",
+  "description": "",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "Cristian Cajas",
+  "keywords": [],
+  "author": "",
   "license": "ISC",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/cajas1927/CIS485.git"
-  },
-  "keywords": [
-    "git"
-  ],
-  "bugs": {
-    "url": "https://github.com/cajas1927/CIS485/issues"
-  },
-  "homepage": "https://github.com/cajas1927/CIS485#readme",
   "dependencies": {
-    "ascii-art": "^2.8.5",
+    "body-parser": "^1.20.2",
     "express": "^4.18.2",
-    "image2ascii": "^1.0.4"
+    "mongoose": "^8.1.3",
+    "pg": "^8.11.3"
   }
 }
