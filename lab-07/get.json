@@ -1,0 +1,1 @@
+[{"patientid":100,"firstname":"John","lastname":"Doe","birthdate":"1980-01-01T05:00:00.000Z","smoker":false,"gender":"M"},{"patientid":200,"firstname":"Jane","lastname":"Doe","birthdate":"1982-02-02T05:00:00.000Z","smoker":true,"gender":"F"},{"patientid":1,"firstname":"Cristian","lastname":"Doe","birthdate":"1990-01-01T05:00:00.000Z","smoker":false,"gender":"m"}]
