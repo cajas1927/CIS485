@@ -21,7 +21,8 @@
   "homepage": "https://github.com/cajas1927/CIS485#readme",
   "dependencies": {
     "ascii-art": "^2.8.5",
-    "express": "^4.18.2",
+    "express": "^4.19.2",
+    "express-basic-auth": "^1.2.1",
     "image2ascii": "^1.0.4"
   }
 }
